@@ -10,7 +10,7 @@
           <h4><?php the_time('F j, Y') ?></h4>
         </div>
         <?php the_post_thumbnail('auto', 'auto'); ?>
-        <p><?php the_excerpt(); ?></p>
+        <?php the_excerpt(); ?>
         <div class="article-button"><a href="<?php the_permalink(); ?>">READ MORE</a></div>
       </article>
     <?php endwhile; else : ?>
@@ -19,8 +19,9 @@
   </div>
   <div class="right">
     <h5>About Me</h5>
-    <img src="img/headshot-vsco.jpg" alt="Personal picture" />
-    <p>I love cats, bicycles, and good design. I write code by day and design by night.</p>
+    <!-- <img src="img/headshot-vsco.jpg" alt="Personal picture" /> -->
+    <?php echo get_avatar(get_the_author_meta('ID'), 207); ?>
+    <p><?php echo get_the_author_meta('description');?></p>
     <h5>Subscribe</h5>
     <p>Please enter your email address and subscribe to our email list to receive the latest updates</p>
     <input type="textfield" name="email" placeholder="Email Address">
