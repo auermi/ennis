@@ -25,6 +25,4 @@ Temporary Items
 .apdisk
 
 # Project Specific (Should remove in the future)
-/static/img/
-/static/style/.sass-cache/
-*.map
+/static
