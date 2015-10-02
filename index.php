@@ -2,8 +2,8 @@
 <header>
   <div class="header-inner">
     <div>
-      <h1>Michael Auer</h1>
-      <h2>I write code and occasional deep thoughts</h2>
+      <h1><?php echo get_bloginfo('name') ?></h1>
+      <h2><?php echo get_bloginfo('description') ?></h2>
     </div>
   </div>
 </header>
