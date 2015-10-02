@@ -1,0 +1,40 @@
+/* Display Flex */
+@mixin flexbox {
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+}
+/* Display Flexbox */
+@mixin flexbox-row {
+	 @include flexbox;
+	-webkit-flex-direction: row;
+	flex-direction: row;
+}
+/* Display Flexbox */
+@mixin flexbox-column {
+	@include flexbox;
+	-webkit-flex-direction: column;
+	flex-direction: column;
+}
+/* Pass in an array of values. */
+@mixin hover-transition($hover-transition-values) {
+	transition: nth($hover-transition-values, 1), nth($hover-transition-values, 2);
+	-webkit-transition: nth($hover-transition-values, 1), nth($hover-transition-values, 2);
+	&:hover {
+		#{nth($hover-transition-values, 1)} : #{nth($hover-transition-values, 3)};
+	}
+}
+/* WIP */
+@mixin placeholder($property, $value) {
+  &:-webkit-input-placeholder {
+   #{$property}: #{$value};
+  }
+
+  &:-moz-placeholder {
+   #{$property}: #{$value};
+  }
+
+  &:-ms-input-placeholder {
+   #{$property}: #{$value};
+  }
+}

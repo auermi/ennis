@@ -1,0 +1,393 @@
+/*
+Theme Name: Ennis
+Author: Michael Andrew Auer
+Author URI: http://michael-auer.co/
+Description: A simple one page blogging theme
+Version: 1.0
+License: The MIT License (MIT)
+License URI: https://opensource.org/licenses/MIT
+Tags: black, white, light, one-column, two-columns, right-sidebar, flexible-width, fluid-layout, responsive-layout, custom-menu, one-page
+*/
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* Display Flex */
+/* Display Flexbox */
+/* Display Flexbox */
+/* Pass in an array of values. */
+/* WIP */
+h1, h2, h3, h4, h5, p, a, button {
+  font-family: "Dosis", sans-serif;
+}
+
+.wrap {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  padding: 5%;
+  max-width: 1200px;
+  margin: 0 auto; }
+
+.left {
+  width: 70%; }
+
+.right {
+  width: 30%; }
+
+header {
+  height: 230px;
+  background: center center no-repeat url("../../img/banner.jpg");
+  background-size: cover; }
+  header .header-inner {
+    height: 100%;
+    width: 100%;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.5); }
+    header .header-inner div {
+      margin: auto; }
+
+b {
+  font-weight: bold; }
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 20px; }
+
+h2 {
+  font-size: 1.5rem; }
+
+h1, h2 {
+  color: #fff;
+  font-weight: 300;
+  text-align: center; }
+
+h3 {
+  font-size: 2rem;
+  margin-bottom: 10px; }
+
+h4 {
+  margin: 0 2% 0 0; }
+
+h5 {
+  border-bottom: 1px #ccc solid;
+  width: 70%;
+  margin-bottom: 20px;
+  padding-bottom: 10px; }
+
+article {
+  margin-bottom: 30px; }
+  article img {
+    width: 80%;
+    margin-bottom: 20px; }
+  article .article-details {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    margin-bottom: 20px; }
+    article .article-details .author {
+      font-weight: bold; }
+      article .article-details .author:hover {
+        text-decoration: underline;
+        cursor: pointer; }
+  article p {
+    width: 80%; }
+  article .article-button {
+    width: 80%;
+    text-align: center;
+    margin-top: 20px; }
+    article .article-button a {
+      background: none;
+      border: #000 solid 1px;
+      padding: 8px 40px;
+      color: #000;
+      text-decoration: none;
+      font-size: .8rem; }
+      article .article-button a:hover {
+        background: #000;
+        color: #fff;
+        cursor: pointer; }
+      article .article-button a:focus {
+        outline: none; }
+
+.right img {
+  width: 60%;
+  margin-bottom: 10px; }
+.right p {
+  width: 60%;
+  margin-bottom: 20px; }
+.right input {
+  width: 60%;
+  height: 30px;
+  margin-bottom: 20px;
+  padding-left: 3%; }
+  .right input:focus {
+    outline: none; }
+.right button {
+  width: 40%;
+  height: 30px;
+  background: none;
+  border: 1px #000 solid; }
+  .right button:hover {
+    background: #000;
+    color: #fff;
+    cursor: pointer; }
+  .right button:focus {
+    outline: none; }
+
+/* From https://css-tricks.com/snippets/css/style-placeholder-text/ */
+input::-webkit-input-placeholder {
+  color: #ccc;
+  font-family: "Dosis", sans-serif; }
+
+input:-moz-placeholder {
+  /* Firefox 18- */
+  color: #ccc;
+  font-family: "Dosis", sans-serif; }
+
+input::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #ccc;
+  font-family: "Dosis", sans-serif; }
+
+input:-ms-input-placeholder {
+  color: #ccc;
+  font-family: "Dosis", sans-serif; }
+
+/* Article Page */
+a.back {
+  text-decoration: none;
+  font-size: 1.3rem; }
+  a.back:hover {
+    text-decoration: underline; }
+  a.back:visited {
+    color: #000; }
+
+.blog-view {
+  width: 100%; }
+  .blog-view p {
+    font-size: 1.3rem;
+    margin-bottom: 20px; }
+
+/* Tablet/Medium Screen */
+@media only screen and (min-width: 651px) and (max-width: 950px) {
+  .right img {
+    width: 80%; }
+  .right p {
+    width: 80%; }
+  .right input {
+    width: 60%;
+    height: 30px; } }
+/* Small Desktop Screen */
+@media only screen and (min-width: 50px) and (max-width: 650px) {
+  html {
+    font-size: 18px; }
+
+  .wrap {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column; }
+
+  .left {
+    width: 100%; }
+
+  article {
+    margin-bottom: 100px; }
+    article img {
+      width: 100%; }
+    article p {
+      width: 100%; }
+    article .article-button {
+      width: 100%;
+      text-align: center;
+      margin-top: 50px; }
+      article .article-button a {
+        background: none;
+        border: #000 solid 1px;
+        padding: 16px 80px;
+        color: #000;
+        text-decoration: none;
+        font-size: 1rem; }
+        article .article-button a:hover {
+          background: #000;
+          color: #fff;
+          cursor: pointer; }
+        article .article-button a:focus {
+          outline: none; }
+
+  .right {
+    width: 70%;
+    margin: 0 auto;
+    text-align: center; }
+    .right h5 {
+      text-align: center;
+      width: 100%; }
+    .right img {
+      width: 80%;
+      margin-bottom: 20px; }
+    .right p {
+      width: 100%;
+      margin-bottom: 40px; }
+    .right input {
+      box-sizing: border-box;
+      width: 100%;
+      height: 60px;
+      margin-bottom: 40px;
+      padding-left: 3%;
+      font-size: 0.8rem; }
+    .right button {
+      width: 100%;
+      height: 50px;
+      font-size: 0.8rem; } }
+/* Mobile Screen */
+@media only screen and (min-device-width: 50px) and (max-device-width: 650px) and (orientation: portrait) {
+  header {
+    height: 200px; }
+
+  html {
+    font-size: 24px; }
+
+  h1 {
+    font-size: 2rem !important; }
+
+  h2 {
+    font-size: 1rem;
+    padding: 1%; }
+
+  h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px; }
+
+  h4 {
+    font-size: .6rem;
+    margin-bottom: 10px; }
+
+  h5 {
+    font-size: 1.4rem;
+    margin-bottom: 30px; }
+
+  .wrap {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column; }
+
+  .left {
+    width: 100%; }
+
+  article {
+    margin-bottom: 80px; }
+    article img {
+      width: 100%; }
+    article p {
+      width: 100%;
+      font-size: .7rem; }
+    article .article-button {
+      width: 100%;
+      text-align: center;
+      margin-top: 40px; }
+      article .article-button a {
+        padding: 12px 60px;
+        font-size: .7rem; }
+        article .article-button a:hover {
+          background: #000;
+          color: #fff;
+          cursor: pointer; }
+        article .article-button a:focus {
+          outline: none; }
+
+  .right {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center; }
+    .right h5 {
+      text-align: center;
+      width: 100%; }
+    .right img {
+      width: 80%;
+      margin-bottom: 25px; }
+    .right p {
+      width: 100%;
+      margin-bottom: 40px;
+      font-size: 1rem; }
+    .right input {
+      box-sizing: border-box;
+      width: 100%;
+      height: 60px;
+      margin-bottom: 20px;
+      font-size: .7rem; }
+    .right button {
+      width: 100%;
+      height: 60px;
+      font-size: .7rem; }
+
+  /* Article Page */
+  a.back {
+    text-decoration: none;
+    font-size: 0.7rem; }
+    a.back:hover {
+      text-decoration: underline; }
+    a.back:visited {
+      color: #000; }
+
+  .blog-view {
+    width: 100%; }
+    .blog-view p {
+      font-size: 0.7rem;
+      margin-bottom: 20px; } }
+
+/*# sourceMappingURL=master.css.map */
