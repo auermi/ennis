@@ -1,12 +1,4 @@
 <? get_header(); ?>
-<header>
-  <div class="header-inner">
-    <div>
-      <h1><?php echo get_bloginfo('name') ?></h1>
-      <h2><?php echo get_bloginfo('description') ?></h2>
-    </div>
-  </div>
-</header>
 <div class="wrap">
   <div class="left">
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>

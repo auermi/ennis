@@ -1,6 +1,10 @@
 <?php
 
 add_theme_support('post-thumbnails');
+$custom_header_args = array(
+  'default-text-color' => 'ffffff'
+);
+add_theme_support( 'custom-header', $custom_header_args );
 
 // Stylesheet Imports
 function ennis_theme_styles() {
