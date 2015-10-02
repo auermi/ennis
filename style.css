@@ -391,3 +391,19 @@ a.back {
       margin-bottom: 20px; } }
 
 /*# sourceMappingURL=master.css.map */
+.widget {
+  margin-bottom: 20px;
+}
+
+.widget li {
+  padding-top: 10px;
+}
+.widget li:nth-child(1) {
+  padding-top: 0;
+}
+.widget a {
+  color: #000;
+}
+.widget a:visited {
+  color: #000;
+}

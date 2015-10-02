@@ -22,10 +22,7 @@
     <!-- <img src="img/headshot-vsco.jpg" alt="Personal picture" /> -->
     <?php echo get_avatar(get_the_author_meta('ID'), 207); ?>
     <p><?php echo get_the_author_meta('description');?></p>
-    <h5>Subscribe</h5>
-    <p>Please enter your email address and subscribe to our email list to receive the latest updates</p>
-    <input type="textfield" name="email" placeholder="Email Address">
-    <button>SIGN UP</button>
+    <?php get_sidebar(); ?>
   </div>
 </div>
 <? get_footer(); ?>
