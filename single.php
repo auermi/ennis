@@ -9,7 +9,11 @@
           <h4>/</h4>
           <h4><?php the_time('F j, Y') ?></h4>
         </div>
-        <?php the_post_thumbnail('auto', 'auto'); ?>
+        <?php
+          if ( has_post_thumbnail() )
+            $image_src = wp_get_attachment_image_src( get_post_thumbnail_id(),'thumbname' );
+            echo '<img src="' . $image_src[0] . '" width="100%" />';
+        ?>
         <?php the_content(); ?>
         <a class="back" href="<?php echo home_url() ?>">&#8592;&nbsp;Back to home</a>
       </article>
