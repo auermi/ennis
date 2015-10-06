@@ -17,11 +17,7 @@
           <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
     <?php endif; ?>
   </div>
-  <div class="right">
-    <h5>About Me</h5>
-    <?php echo get_avatar(get_the_author_meta('ID'), 207); ?>
-    <p><?php echo get_the_author_meta('description');?></p>
-    <?php get_sidebar(); ?>
-  </div>
+  <?php get_sidebar(); ?>
+
 </div>
 <? get_footer(); ?>
