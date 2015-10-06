@@ -19,7 +19,6 @@
   </div>
   <div class="right">
     <h5>About Me</h5>
-    <!-- <img src="img/headshot-vsco.jpg" alt="Personal picture" /> -->
     <?php echo get_avatar(get_the_author_meta('ID'), 207); ?>
     <p><?php echo get_the_author_meta('description');?></p>
     <?php get_sidebar(); ?>
