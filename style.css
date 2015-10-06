@@ -62,7 +62,7 @@ table {
 /* Display Flexbox */
 /* Pass in an array of values. */
 /* WIP */
-h1, h2, h3, h4, h5, p, a, button {
+h1, h2, h3, h4, h5, p, a, span, button {
   font-family: "Dosis", sans-serif;
 }
 
@@ -397,4 +397,12 @@ a.back {
 }
 .widget li:nth-child(1) {
   padding-top: 0;
+}
+.post-date:before {
+  content: '\A';
+  white-space: pre;
+
+}
+.post-date {
+  line-height: 24px;
 }
