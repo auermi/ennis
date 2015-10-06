@@ -9,7 +9,10 @@
           <h4>/</h4>
           <h4><?php the_time('F j, Y') ?></h4>
         </div>
-        <?php the_post_thumbnail('auto', 'auto'); ?>
+        <?php
+          $image_src = wp_get_attachment_image_src( get_post_thumbnail_id(),'thumbname' );
+          echo '<img src="' . $image_src[0] . '" width="100%" />';
+        ?>
         <?php the_excerpt(); ?>
         <div class="article-button"><a href="<?php the_permalink(); ?>">READ MORE</a></div>
       </article>
@@ -19,7 +22,8 @@
   </div>
   <div class="right">
     <h5>About Me</h5>
-    <?php echo get_avatar(get_the_author_meta('ID'), 207); ?>
+    <?php $args = array('size' => 320); ?>
+    <?php $avatar_src = get_avatar_url(get_the_author_meta('ID'), $args); echo '<img src="' . $avatar_src . '" width="100%" />'; ?>
     <p><?php echo get_the_author_meta('description');?></p>
     <?php get_sidebar(); ?>
   </div>
