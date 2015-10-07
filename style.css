@@ -38,7 +38,8 @@ footer, header, hgroup, menu, nav, section {
   display: block; }
 
 body {
-  line-height: 1; }
+  line-height: 1;
+  background-color: #000;}
 
 ol, ul {
   list-style: none; }
@@ -74,7 +75,9 @@ h1, h2, h3, h4, h5, h6, div, p, a, span, button, input, header, footer, select, 
   flex-direction: row;
   padding: 5%;
   max-width: 1200px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  background-color: #fff;
+}
 
 .left {
   width: 70%; }
@@ -125,7 +128,9 @@ h5, h3.author-header {
   width: 70%;
   margin-bottom: 20px;
   padding-bottom: 10px; }
-
+h6 {
+  color: #fff;
+}
 article {
   margin-bottom: 30px; }
   article img {
@@ -219,7 +224,49 @@ a.back {
   .blog-view p {
     font-size: 1.3rem;
     margin-bottom: 20px; }
+    .widget {
+      margin-bottom: 20px;
+    }
 
+    .widget li {
+      padding-top: 10px;
+    }
+    .widget li:nth-child(1) {
+      padding-top: 0;
+    }
+    .post-date:before {
+      content: '\A';
+      white-space: pre;
+
+    }
+    .post-date {
+      line-height: 24px;
+    }
+    .screen-reader-text {
+      display: none;
+    }
+    footer {
+      background-color: #000;
+      width: 100%;
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: flex;
+      -webkit-flex-direction: row;
+      flex-direction: row;
+      padding: 5%;
+      box-sizing: border-box;
+    }
+    footer h6 {
+      margin: auto 0;
+      width: 70%;
+    }
+    footer h6:nth-child(even) {
+      width: 30%;
+      padding: 0;
+    }
+    footer h6 a {
+      color: #fff;
+    }
 /* Tablet/Medium Screen */
 @media only screen and (min-width: 651px) and (max-width: 950px) {
   .right img {
@@ -233,7 +280,15 @@ a.back {
 @media only screen and (min-width: 50px) and (max-width: 650px) {
   html {
     font-size: 18px; }
-
+    footer {
+      -webkit-flex-direction: column;
+      flex-direction: column;
+      width: 100%;
+    }
+    footer h6 {
+      text-align: center;
+      margin: 10px auto;
+    }
   .wrap {
     display: -webkit-flex;
     display: -ms-flex;
@@ -299,7 +354,11 @@ a.back {
 @media only screen and (min-device-width: 50px) and (max-device-width: 650px) and (orientation: portrait) {
   header {
     height: 200px; }
-
+    footer {
+      -webkit-flex-direction: column;
+      flex-direction: column;
+      width: 100%;
+    }
   html {
     font-size: 24px; }
 
@@ -394,25 +453,3 @@ a.back {
       margin-bottom: 20px; }
   .widget {
     display: none;}}
-
-.widget {
-  margin-bottom: 20px;
-}
-
-.widget li {
-  padding-top: 10px;
-}
-.widget li:nth-child(1) {
-  padding-top: 0;
-}
-.post-date:before {
-  content: '\A';
-  white-space: pre;
-
-}
-.post-date {
-  line-height: 24px;
-}
-.screen-reader-text {
-  display: none;
-}
