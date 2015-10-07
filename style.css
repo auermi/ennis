@@ -120,7 +120,7 @@ h3 {
 h4 {
   margin: 0 2% 0 0; }
 
-h5 {
+h5, h3.author-header {
   border-bottom: 1px #ccc solid;
   width: 70%;
   margin-bottom: 20px;

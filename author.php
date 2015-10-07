@@ -1,6 +1,10 @@
 <? get_header(); ?>
 <div class="wrap">
   <div class="left">
+    <?php
+$curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : get_userdata(intval($author));
+?>
+    <h3 class="author-header">Posts by <?php echo $curauth->display_name; ?></h3>
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
       <article>
         <h3><?php the_title(); ?></h3>
@@ -18,7 +22,7 @@
         <div class="article-button"><a href="<?php the_permalink(); ?>">READ MORE</a></div>
       </article>
     <?php endwhile; else : ?>
-          <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+          <p><?php _e( 'Sorry, no posts have been written by this author' ); ?></p>
     <?php endif; ?>
   </div>
   <?php get_sidebar(); ?>
