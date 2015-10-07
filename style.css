@@ -290,7 +290,11 @@ a.back {
     .right button {
       width: 100%;
       height: 50px;
-      font-size: 0.8rem; } }
+      font-size: 0.8rem; }
+      .widget {
+        display: none;
+      } }
+
 /* Mobile Screen */
 @media only screen and (min-device-width: 50px) and (max-device-width: 650px) and (orientation: portrait) {
   header {
@@ -387,7 +391,9 @@ a.back {
     width: 100%; }
     .blog-view p {
       font-size: 0.7rem;
-      margin-bottom: 20px; } }
+      margin-bottom: 20px; }
+  .widget {
+    display: none;}}
 
 .widget {
   margin-bottom: 20px;
