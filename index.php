@@ -18,9 +18,26 @@
         <div class="article-button"><a href="<?php the_permalink(); ?>">READ MORE</a></div>
       </article>
     <?php endwhile; else : ?>
-          <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+          <h3>Thank you for installing the Ennis Wordpress Theme!</h3>
+          <h5>Getting Started</h5>
+          <ul>
+            <li>Add a blog post</li>
+            <li>Add widgets</li>
+            <li>Change your site title</li>
+            <li>Change your site tagline</li>
+            <li>Update your header background</li>
+          </ul>
+          <br>
+          <h5>About</h5>
+          <ul>
+            <li>The Ennis theme is a simple one page blogging theme. The theme also includes a small section for a brief biography and photo as well as a widget area.</li>
+            <li>Add a blog post in the Wordpress dashboard to start using the theme.</li>
+            <li>The Ennis theme is a free and open source theme developed by <a href="https://twitter.com/auermi" target="_blank">Michael Auer</a>. You can view the source on <a href="https://github.com/auermi/ennis" target="_blank">Github</a>.</li>
+          </ul>
     <?php endif; ?>
   </div>
-  <?php get_sidebar(); ?>
+  <?php if ( have_posts() ) : ?>
+    <?php get_sidebar(); ?>
+  <? endif ?>
 </div>
 <? get_footer(); ?>
