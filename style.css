@@ -175,16 +175,17 @@ article {
   padding-left: 3%; }
   .right input:focus {
     outline: none; }
-.right button {
+.right input#searchsubmit {
   width: 40%;
   height: 30px;
   background: none;
-  border: 1px #000 solid; }
-  .right button:hover {
+  border: 1px #000 solid;
+  padding: 0;}
+  .right input#searchsubmit:hover {
     background: #000;
     color: #fff;
     cursor: pointer; }
-  .right button:focus {
+  .right input#searchsubmit:focus {
     outline: none; }
 
 /* From https://css-tricks.com/snippets/css/style-placeholder-text/ */
@@ -405,4 +406,7 @@ a.back {
 }
 .post-date {
   line-height: 24px;
+}
+.screen-reader-text {
+  display: none;
 }
