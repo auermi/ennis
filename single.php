@@ -17,6 +17,7 @@
         ?>
         <?php the_content(); ?>
         <a class="back" href="<?php echo home_url() ?>">&#8592;&nbsp;Back to home</a>
+        <?php comments_template(); ?> 
       </article>
     <?php endwhile; else : ?>
           <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
