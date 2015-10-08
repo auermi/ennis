@@ -10,8 +10,10 @@
     <header style="background-image: url(<?php echo get_header_image(); ?>);">
       <div class="header-inner">
         <div>
-          <h1 style="color: #<?php echo get_header_textcolor() ?>;"><?php echo get_bloginfo('name') ?></h1>
-          <h2 style="color: #<?php echo get_header_textcolor() ?>;"><?php echo get_bloginfo('description') ?></h2>
+          <?php if (display_header_text()): ?>
+            <h1 style="color: #<?php echo get_header_textcolor() ?>;"><?php echo get_bloginfo('name') ?></h1>
+            <h2 style="color: #<?php echo get_header_textcolor() ?>;"><?php echo get_bloginfo('description') ?></h2>
+          <?php endif; ?>
         </div>
       </div>
     </header>
