@@ -5,7 +5,7 @@
       <article class="blog-view">
         <h3><?php the_title(); ?></h3>
         <div class="article-details">
-          <h4>Written by: <a class="author"><?php the_author(); ?></a></h4>
+          <h4>Written by: <span class="author"><?php the_author_posts_link(); ?></span></h4>
           <h4>/</h4>
           <h4><?php the_time('F j, Y') ?></h4>
         </div>
