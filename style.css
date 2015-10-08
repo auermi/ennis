@@ -70,7 +70,6 @@ h1, h2, h3, h4, h5, h6, div, p, a, span, button, input, header, footer, select, 
   -webkit-flex-direction: row;
   flex-direction: row;
   padding: 5%;
-  max-width: 1200px;
   margin: 0 auto;
   background-color: #fff;
 }
