@@ -2,7 +2,9 @@
 
 add_theme_support('post-thumbnails');
 $custom_header_args = array(
-  'default-text-color' => 'ffffff'
+  'default-text-color' => 'ffffff',
+  'width' => 1400,
+  'height' => 500
 );
 add_theme_support('custom-header', $custom_header_args);
 
