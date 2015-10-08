@@ -1,6 +1,7 @@
 <? get_header(); ?>
 <div class="wrap">
   <div class="left">
+    <?php query_posts('showposts=4'); ?>
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
       <article>
         <h3><?php the_title(); ?></h3>
@@ -13,7 +14,7 @@
           if ( has_post_thumbnail() ) {
             $image_src = wp_get_attachment_image_src( get_post_thumbnail_id(),'thumbname' );
             echo '<img src="' . $image_src[0] . '" width="100%" />';
-          }  
+          }
         ?>
         <?php the_excerpt(); ?>
         <div class="article-button"><a href="<?php the_permalink(); ?>">READ MORE</a></div>
@@ -39,6 +40,7 @@
   </div>
   <?php if ( have_posts() ) : ?>
     <?php get_sidebar(); ?>
-  <? endif ?>
+  <?php endif; ?>
+  <?php wp_reset_query(); ?>  
 </div>
 <? get_footer(); ?>
