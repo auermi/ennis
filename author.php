@@ -7,7 +7,7 @@ $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : g
     <h3 class="author-header">Posts by <?php echo $curauth->display_name; ?></h3>
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
       <article>
-        <h3><?php the_title(); ?></h3>
+        <h3><a class="article-title" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
         <div class="article-details">
           <h4>Written by: <span class="author"><?php the_author_posts_link(); ?></span></h4>
           <h4>/</h4>
