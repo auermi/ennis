@@ -1,6 +1,7 @@
 <? get_header(); ?>
 <div class="wrap">
   <div class="left">
+    <h3 class="author-header">Latest Posts</h3>
     <?php query_posts('showposts=4'); ?>
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
       <article>
@@ -41,6 +42,6 @@
   <?php if ( have_posts() ) : ?>
     <?php get_sidebar(); ?>
   <?php endif; ?>
-  <?php wp_reset_query(); ?>  
+  <?php wp_reset_query(); ?>
 </div>
 <? get_footer(); ?>

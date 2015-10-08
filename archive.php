@@ -1,6 +1,7 @@
 <? get_header(); ?>
 <div class="wrap">
   <div class="left">
+    <h3 class="author-header">Archives</h3>
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
       <article>
         <h3><?php the_title(); ?></h3>
