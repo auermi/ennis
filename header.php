@@ -11,7 +11,7 @@
       <div class="header-inner">
         <div>
           <?php if (display_header_text()): ?>
-            <a href="<?php echo home_url() ?>"><h1 style="color: #<?php echo get_header_textcolor() ?>;"><?php echo get_bloginfo('name') ?></h1></a>
+            <a class="header-link" href="<?php echo home_url() ?>"><h1 style="color: #<?php echo get_header_textcolor() ?>;"><?php echo get_bloginfo('name') ?></h1></a>
             <h2 style="color: #<?php echo get_header_textcolor() ?>;"><?php echo get_bloginfo('description') ?></h2>
           <?php endif; ?>
         </div>

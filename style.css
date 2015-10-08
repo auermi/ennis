@@ -263,6 +263,9 @@ a.back {
     footer h6 a {
       color: #fff;
     }
+    a.header-link {
+      text-decoration: none;
+    }
 /* Tablet/Medium Screen */
 @media only screen and (min-width: 651px) and (max-width: 950px) {
   .right img {
