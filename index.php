@@ -10,9 +10,10 @@
           <h4><?php the_time('F j, Y') ?></h4>
         </div>
         <?php
-          if ( has_post_thumbnail() )
+          if ( has_post_thumbnail() ) {
             $image_src = wp_get_attachment_image_src( get_post_thumbnail_id(),'thumbname' );
             echo '<img src="' . $image_src[0] . '" width="100%" />';
+          }  
         ?>
         <?php the_excerpt(); ?>
         <div class="article-button"><a href="<?php the_permalink(); ?>">READ MORE</a></div>
